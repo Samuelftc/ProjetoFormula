@@ -1,985 +1,898 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-tema="escuro">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fórmula 1 — Temporada 2025</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
+    <!-- ========== HEADER / NAVEGAÇÃO ========== -->
     <header>
-        <div class="container">
-            <a href=""><img src="/assets/imagem/F1Logo.webp"></a>
+        <div class="container header-inner">
+            <!-- Navegação desktop -->
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#pilotos">Pilotos</a></li>
                     <li><a href="#equipes">Equipes</a></li>
-                    <li><a href="#GPs">GP`s</a></li>
+                    <li><a href="#GPs">GP's</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
+
+            <div class="header-acoes">
+                <!-- Botão toggle de tema -->
+                <button id="btn-tema" class="btn-tema" aria-label="Alternar tema claro/escuro">
+                    <i class="fa-solid fa-moon" id="icone-tema"></i>
+                </button>
+
+                <!-- Botão hamburguer (mobile) -->
+                <button id="btn-menu" class="btn-menu" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
         </div>
+
+        <!-- Menu mobile (aparece ao clicar no hamburguer) -->
+        <nav id="menu-mobile" class="menu-mobile fechado">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#pilotos">Pilotos</a></li>
+                <li><a href="#equipes">Equipes</a></li>
+                <li><a href="#GPs">GP's</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main id="home">
-        <section id="banner"></section>
 
+    <main id="home">
+
+        <!-- ========== BANNER ========== -->
+        <section id="banner">
+            <div class="banner-conteudo">
+                <span class="banner-tag">Temporada 2025</span>
+                <h1>O ESPORTE<br><span class="destaque-vermelho">MAIS VELOZ</span><br>DO MUNDO</h1>
+                <p>Pilotos, equipes, circuitos e tudo sobre o Campeonato Mundial de Fórmula 1</p>
+                <a href="#sobre" class="btn-primario">Explorar</a>
+            </div>
+            <div class="banner-overlay"></div>
+        </section>
+
+
+        <!-- ========== SOBRE ========== -->
         <section id="sobre">
             <div class="container">
-                <h2 class="titulo">sobre</h2>
-                <p>Fórmula 1 (também F1; em inglês: Formula One) é a categoria mais avançada do esporte a motor e é
-                    regulamentada pela Federação Internacional de Automobilismo. O "Campeonato Mundial de Pilotos", que
-                    se tornou o Campeonato Mundial de Fórmula 1 da FIA em 1981, tem sido uma das principais categorias
-                    de corrida em todo o mundo desde sua temporada inaugural em 1950. A palavra "fórmula" no nome se
-                    refere ao conjunto de regras às quais todos os carros dos participantes devem estar em
-                    conformidade. Uma temporada de Fórmula 1 consiste em uma série de corridas, conhecidas como
-                    Grandes Prêmios, que acontecem em todo o mundo em circuitos construídos para esse fim e em vias
-                    públicas fechadas.
-                    Ao contrário do que muitos acreditam, o registro oficial da categoria consta como Fórmula Um
-                    (Campeonato Mundial de Fórmula Um), com o numeral escrito por extenso, mas também se aceita o uso do
-                    1 e do I (em romano).</p>
-                <h3>campeonatos</h3>
-                <div class="display-flex">
-                    <div>
-                        <h4>Campeonato de pilotos</h4>
-                        <p>O campeonato de pilotos da Fórmula 1 é uma disputa individual entre os corredores das
-                            equipes. Ao longo da temporada, que tem várias corridas (os chamados GPs), cada piloto soma
-                            pontos de acordo com sua posição final em cada prova. O vencedor de uma corrida leva 25
-                            pontos, o segundo colocado 18, o terceiro 15, e assim por diante, até o décimo lugar, que
-                            recebe 1 ponto.
-                            No fim da temporada, o piloto que tiver somado mais pontos ao longo de todos os GPs é
-                            declarado campeão mundial de Fórmula 1. A disputa costuma ser intensa, e cada ponto pode
-                            fazer a diferença!</p>
+                <h2 class="titulo">Sobre a Fórmula 1</h2>
+
+                <p class="texto-intro">
+                    Fórmula 1 (também F1) é a categoria mais avançada do esporte a motor, regulamentada pela Federação
+                    Internacional de Automobilismo. O Campeonato Mundial de Pilotos existe desde sua temporada inaugural
+                    em 1950, e uma temporada consiste em uma série de corridas — os Grandes Prêmios — realizadas em
+                    circuitos ao redor do mundo.
+                </p>
+
+                <h3 class="subtitulo">Campeonatos</h3>
+
+                <div class="grid-2">
+                    <div class="card-info">
+                        <div class="card-icone"><i class="fa-solid fa-helmet-safety"></i></div>
+                        <h4>Campeonato de Pilotos</h4>
+                        <p>Disputa individual entre os corredores. Ao longo da temporada, cada piloto soma pontos de
+                            acordo com sua posição em cada prova. O vencedor leva 25 pontos, o segundo 18, o terceiro 15
+                            e assim por diante até o décimo lugar. O piloto com mais pontos no final é o campeão mundial.
+                        </p>
                     </div>
 
-                    <div>
-                        <h4>Campeonato de construtores</h4>
-                        <p>O campeonato de construtores da Fórmula 1 é uma disputa entre as equipes, e não os pilotos
-                            individualmente. Cada equipe tem dois pilotos, e os pontos que eles conquistam nas corridas
-                            são somados para formar a pontuação da equipe em cada Grande Prêmio.
-                            Por exemplo: se um piloto da equipe termina em 1º (25 pontos) e o outro em 3º (15 pontos), a
-                            equipe soma 40 pontos naquela corrida. Isso se repete durante toda a temporada, e no final,
-                            a equipe que tiver acumulado mais pontos vence o Campeonato Mundial de Construtores.
-                            Esse título é muito importante, porque mostra qual foi a equipe mais forte e consistente do
-                            ano — tanto em desempenho dos pilotos quanto na qualidade do carro.</p>
+                    <div class="card-info">
+                        <div class="card-icone"><i class="fa-solid fa-wrench"></i></div>
+                        <h4>Campeonato de Construtores</h4>
+                        <p>Disputa entre as equipes. Os pontos dos dois pilotos de cada equipe são somados a cada
+                            corrida. A equipe que acumular mais pontos ao longo da temporada vence o Campeonato Mundial
+                            de Construtores — um título que mostra qual foi a equipe mais forte e consistente do ano.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
+
+        <!-- ========== PILOTOS ========== -->
         <section id="pilotos">
             <div class="container">
-                <h2 class="titulo">Pilotos da temporada 2025</h2>
-                <div class="display-flex">
-                    <div class="box">
-                        <div>
-                            <img src="./assets/imagem/MaxVerstappen.jpg"
-                                alt="foto do piloto de formula 1: Max Verstappen">
+                <h2 class="titulo">Pilotos da Temporada 2025</h2>
+
+                <div class="grid-pilotos">
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/MaxVerstappen.jpg" alt="Max Verstappen">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Red Bull</span>
                             <h3>Max Verstappen</h3>
-                            <h4>Equipe: Red bull</h4>
-                            <p>Max Emilian Verstappen nasceu em Hasselt no dia 30 de setembro de 1997, é um
-                                automobilista neerlandês. Ele é piloto de Fórmula 1 desde 2015, tendo feito sua estreia
-                                pela equipe Toro Rosso. É quatro vezes campeão da Fórmula 1 em 2021, 2022, 2023 e 2024 e
-                                terminou em terceiro lugar em 2019 e 2020 com a Red Bull Racing, equipe pela qual corre
-                                desde 2016.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/imagem/FernandoAlonoso.jpg"
-                                alt="foto do piloto de formula 1: Fernando Alonso">
-                            <h3>Fernando Alonso</h3>
-                            <h4>Equipe: Aston Martin</h4>
-                            <p>Fernando Alonso Díaz nasceu em Oviedo no dia 29 de julho de 1981, é um automobilista
-                                espanhol que atua na Fórmula 1 pela equipe Aston Martin. É bicampeão mundial de Fórmula
-                                1 em 2005 e 2006 pela Renault, além de vice-campeão em 2010, 2012 e 2013 pela Ferrari,
-                                também vencedor de duas provas de Endurance, as 24 Horas de Le Mans de 2018 e 2019 e
-                                também as 24 Horas de Daytona de 2019.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/imagem/Hamilton.jpg" alt="foto do piloto de formula 1: Lewis Hamilton">
-                            <h3>Lewis Hamilton</h3>
-                            <h4>Equipe: Ferrari</h4>
-                            <p>Sir Lewis Carl Davidson Hamilton nasceu em Stevenage no dia 7 de janeiro de 1985 é um
-                                automobilista britânico. Sete vezes campeão mundial de Fórmula 1, nos anos de 2008,
-                                2014, 2015, 2017, 2018, 2019 e 2020, Hamilton é um dos maiores pilotos de todos os
-                                tempos, e um dos desportistas mais bem sucedidos da história.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/imagem/CharlesLeclerc.jpg"
-                                alt="foto do piloto de formula 1: Charles Leclerc">
-                            <h3>Charles Leclerc</h3>
-                            <h4>Equipe: Ferrari</h4>
-                            <p>Charles Marc Hervé Perceval Leclerc nasceu em Monte Carlo no dia 16 de outubro de 1997, é
-                                um piloto
-                                de automóveis monegasco, que compete na Fórmula 1 pela equipe Ferrari.
-                                Integrou a Ferrari Driver Academy em 2016, ganhou o campeonato da GP3 Series em
-                                2016 e o Campeonato de Fórmula 2 da FIA em 2017, pela ART Grand Prix.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/imagem/GeorgeRussell.png"
-                                alt="foto do piloto de formula 1: George Russell">
-                            <h3>George Russell</h3>
-                            <h4>Equipe: Mercedes</h4>
-                            <p>George Russell nascido 15 de fevereiro de 1998 em King's Lynn, é um piloto britânico
-                                de Fórmula 1 que atualmente compete pela equipe Mercedes. Iniciou sua carreira no kart
-                                em 2006 e estreou nos monopostos em 2014, ano em que venceu a Fórmula 4 BRDC. Também foi
-                                campeão da GP3 em 2017 e da Fórmula 2 em 2018, ambos os títulos com a equipe ART Grand
-                                Prix. Ingressou no programa de jovens pilotos da Mercedes em 2017 e, em 2019, estreou na
-                                Fórmula 1 pela equipe Williams. Em 2022, passou a competir pela Mercedes.
-                            </p>
+                            <p>Nasceu em Hasselt em 30/09/1997. Piloto neerlandês, está na F1 desde 2015. É quatro vezes
+                                campeão mundial (2021, 2022, 2023 e 2024) pela Red Bull Racing.</p>
                         </div>
                     </div>
-                    <div class="box">
-                        <div>
-                            <img src="./assets/imagem/LandoNorris.webp" alt="foto do piloto de formula 1: Lando Norris">
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/LandoNorris.webp" alt="Lando Norris">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">McLaren</span>
                             <h3>Lando Norris</h3>
-                            <h4>Equipe: McLaren</h4>
-                            <p>Lando Norris nasceu em Bristol no dia 13 de novembro de 1999, é um automobilista
-                                britânico que atualmente compete na Fórmula 1 pela equipe McLaren. Ele estreou na equipe
-                                em 2019 e foi vice-campeão em 2024. Ele foi campeão da Fórmula MSA em 2015, da Toyota
-                                Racing Series, da Fórmula Renault 2.0 e da Fórmula Renault Norte-Europeia em 2016, do
-                                Campeonato Europeu de Fórmula 3 da FIA de 2017, e vice-campeão da Fórmula 2 em 2018.
-                            </p>
+                            <p>Nasceu em Bristol em 13/11/1999. Piloto britânico, compete pela McLaren desde 2019.
+                                Foi vice-campeão em 2024 e um dos maiores talentos da geração atual.</p>
                         </div>
+                    </div>
 
-                        <div>
-                            <img src="./assets/imagem/OscarPiastri.webp"
-                                alt="foto do piloto de formula 1: Oscar Piastri">
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/Hamilton.jpg" alt="Lewis Hamilton">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Ferrari</span>
+                            <h3>Lewis Hamilton</h3>
+                            <p>Nasceu em Stevenage em 07/01/1985. Sete vezes campeão mundial (2008, 2014, 2015, 2017,
+                                2018, 2019, 2020), é considerado um dos maiores pilotos de todos os tempos.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/CharlesLeclerc.jpg" alt="Charles Leclerc">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Ferrari</span>
+                            <h3>Charles Leclerc</h3>
+                            <p>Nasceu em Monte Carlo em 16/10/1997. Piloto monegasco da Ferrari, campeão da GP3 Series
+                                em 2016 e do Campeonato de Fórmula 2 da FIA em 2017.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/OscarPiastri.webp" alt="Oscar Piastri">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">McLaren</span>
                             <h3>Oscar Piastri</h3>
-                            <h4>Equipe: McLaren</h4>
-                            <p>Oscar Jack Piastri nasceu em Melbourne no dia 6 de abril de 2001, é um automobilista
-                                australiano que
-                                atualmente compete na Fórmula 1 pela equipe McLaren.
-                                Piastri foi campeão da Eurocopa de Fórmula Renault em 2019 com a equipe R-ace GP, do
-                                Campeonato de Fórmula 3 da FIA em 2020 e do Campeonato de Fórmula 2 da FIA em 2021 com a
-                                Prema Racing.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/imagem/KimiAntonelli.jfif"
-                                alt="foto do piloto de formula 1: Kimi Antonelli">
-                            <h3>Kimi antonelli</h3>
-                            <h4>Equipe: Mercedes</h4>
-                            <p>Andrea Kimi Antonelli nasceu em Bolonha no dia 25 de agosto de 2006, mais comumente
-                                conhecido como Kimi Antonelli, é um automobilista italiano que atualmente compete na
-                                Fórmula 1 pela equipe Mercedes. Anteriormente, ele competiu na Fórmula 2 pela equipe
-                                Prema Racing.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/imagem/YukiTsunoda.jpg" alt="foto do piloto de formula 1: Yuki Tsunoda">
-                            <h3>Yuki Tsunoda</h3>
-                            <h4>Equipe: Red bull</h4>
-                            <p>Yuki Tsunoda nasceu em Kanagawa no dia 11 de maio de 2000, é um automobilista japonês que
-                                atualmente compete na Fórmula 1 pela equipe Red Bull Racing. Estreou na categoria em
-                                2021 pela AlphaTauri, seguindo na equipe após esta ser renomeada para Racing Bulls. Ele
-                                foi campeão do Campeonato Japonês de Fórmula 4 em 2018 e é membro da Red Bull Junior
-                                Team e do Honda Formula Dream Project.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/imagem/LanceStroll.jpg" alt="foto do piloto de formula 1: Lance Stroll">
-                            <h3>Lance Stroll</h3>
-                            <h4>Equipe: Aston Martin</h4>
-                            <p>Lance Strulovitch, mais conhecido como Lance Stroll nasceu em Montreal no dia 29 de
-                                outubro de 1998, é um automobilista canadense que atua na Fórmula 1 pela equipe Aston
-                                Martin. Estreou na categoria em 2017 na equipe Williams, tendo se juntado à Racing
-                                Point, equipe comprada por seu pai Lawrence Stroll, em 2019, e permanecendo nela até sua
-                                renomeação para Aston Martin em 2021. Anteriormente, foi campeão da Fórmula 3 Europeia
-                                em 2016, campeão da Toyota Racing Series em 2015 e campeão da temporada inaugural da
-                                Fórmula 4 Italiana, em 2014. É ex-membro da Ferrari Driver Academy e da Academia de
-                                pilotos da Williams.</p>
+                            <p>Nasceu em Melbourne em 06/04/2001. Piloto australiano da McLaren, campeão da F3 em 2020 e
+                                da F2 em 2021 pela Prema Racing.</p>
                         </div>
                     </div>
-                    <div class="box">
-                        <div>
-                            <img src="./assets/imagem/AlexanderAlbon.jpg"
-                                alt="foto do piloto de formula 1: Alexander Albon">
-                            <h3>Alexander albon</h3>
-                            <h4>Equipe: Williams</h4>
-                            <p>Alexander Albon Ansusinha nasceu em Londres no dia 23 de
-                                março de 1996 é um automobilista anglo-tailandês que atualmente compete na Fórmula 1
-                                pela equipe Williams.</p>
-                        </div>
 
-                        <div>
-                            <img src="./assets/imagem/CarlosSainz.webp" alt="foto do piloto de formula 1: Carlos Sainz">
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/GeorgeRussell.png" alt="George Russell">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Mercedes</span>
+                            <h3>George Russell</h3>
+                            <p>Nasceu em King's Lynn em 15/02/1998. Piloto britânico da Mercedes, campeão da GP3 em 2017
+                                e da Fórmula 2 em 2018, ambos pela ART Grand Prix.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/FernandoAlonoso.jpg" alt="Fernando Alonso">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Aston Martin</span>
+                            <h3>Fernando Alonso</h3>
+                            <p>Nasceu em Oviedo em 29/07/1981. Bicampeão mundial (2005 e 2006 pela Renault) e vencedor
+                                das 24 Horas de Le Mans em 2018 e 2019.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/KimiAntonelli.jfif" alt="Kimi Antonelli">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Mercedes</span>
+                            <h3>Kimi Antonelli</h3>
+                            <p>Nasceu em Bolonha em 25/08/2006. Piloto italiano, um dos mais jovens da história da F1,
+                                estreando pela Mercedes em 2025 vindo da Fórmula 2.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/CarlosSainz.webp" alt="Carlos Sainz">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Williams</span>
                             <h3>Carlos Sainz</h3>
-                            <h4>Equipe: Williams</h4>
-                            <p>Carlos Sainz Vázquez de Castro Cenamor Rincón Rebollo Virto Moreno de Aranda Don Per
-                                Urrielagoiria Pérez del Pulgar, mais conhecido como Carlos Sainz Jr. nasceu em Madrid no
-                                dia 1 de setembro de 1994, é um piloto espanhol de automobilismo que atualmente compete
-                                na Fórmula 1 pela equipe Williams. Filho do bicampeão mundial de rali Carlos Sainz, Jr.
-                                foi da Red Bull Junior Team entre 2010 e 2014. Ele iniciou sua carreira na Fórmula 1 em
-                                2015 pela Toro Rosso, seguindo lá até 2017, quando a Renault o contratou por empréstimo
-                                e o efetivou até o final de 2018. Depois, Sainz esteve na McLaren entre os anos de 2019
-                                e 2020 e na Ferrari de 2021 à 2024. Sainz atualmente corre pela Williams, em um contrato
-                                de dois anos com opção de extensão.</p>
+                            <p>Nasceu em Madrid em 01/09/1994. Piloto espanhol com passagens por Toro Rosso, Renault,
+                                McLaren e Ferrari. Em 2025 compete pela Williams.</p>
                         </div>
+                    </div>
 
-                        <div>
-                            <img src="./assets/imagem/OliverBearman.webp"
-                                alt="foto do piloto de formula 1: Oliver Bearman">
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/AlexanderAlbon.jpg" alt="Alexander Albon">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Williams</span>
+                            <h3>Alexander Albon</h3>
+                            <p>Nasceu em Londres em 23/03/1996. Piloto anglo-tailandês que compete pela Williams,
+                                equipe onde se consolidou após passagem pela Red Bull.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/YukiTsunoda.jpg" alt="Yuki Tsunoda">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Red Bull</span>
+                            <h3>Yuki Tsunoda</h3>
+                            <p>Nasceu em Kanagawa em 11/05/2000. Piloto japonês, membro do Red Bull Junior Team.
+                                Estreou na F1 em 2021 pela AlphaTauri e em 2025 compete pela Red Bull Racing.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/LanceStroll.jpg" alt="Lance Stroll">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Aston Martin</span>
+                            <h3>Lance Stroll</h3>
+                            <p>Nasceu em Montreal em 29/10/1998. Piloto canadense, estreou em 2017 pela Williams e desde
+                                2019 compete na equipe do seu pai Lawrence Stroll, hoje chamada Aston Martin.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/OliverBearman.webp" alt="Oliver Bearman">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Haas</span>
                             <h3>Oliver Bearman</h3>
-                            <h4>Equipe: Haas</h4>
-                            <p>Oliver James Bearman nasceu em Havering no dia 8 de maio de 2005, também conhecido como
-                                Ollie Bearman,
-                                é um automobilista britânico que atualmente compete na Fórmula 1 pela equipe Haas.
-                                Foi campeão italiano e da ADAC Fórmula 4 em 2021 e é membro da Ferrari Driver
-                                Academy.
-                                Bearman fez sua estreia na Fórmula 1 no Grande Prêmio da Arábia Saudita de 2024,
-                                substituindo Carlos Sainz Jr. na Ferrari, devido a apendicite que o piloto titular
-                                sofreu. Quatro meses depois, ele assinou um contrato com a Haas para competir com a
-                                equipe estadunidense a partir da temporada de 2025, em um acordo de vários anos.
-                            </p>
+                            <p>Nasceu em Havering em 08/05/2005. Piloto britânico da Ferrari Driver Academy, estreou na
+                                F1 em 2024 e assinou contrato com a Haas para a temporada completa de 2025.</p>
                         </div>
+                    </div>
 
-                        <div>
-                            <img src="./assets/imagem/EstebanOcon.jpg" alt="foto do piloto de formula 1: Esteban Ocon">
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/EstebanOcon.jpg" alt="Esteban Ocon">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Haas</span>
                             <h3>Esteban Ocon</h3>
-                            <h4>Equipe: Haas</h4>
-                            <p>Esteban José Jean-Pierre Ocon-Khelfane, mais conhecido como Esteban Ocon nasceu em Évreux
-                                no dia
-                                17 de setembro de 1996, é um piloto francês de automobilismo que atualmente compete na
-                                Formula 1 pela equipe Haas.</p>
+                            <p>Nasceu em Évreux em 17/09/1996. Piloto francês com experiência em Force India, Mercedes
+                                (reserva), Racing Point e Alpine. Desde 2025 compete pela Haas.</p>
                         </div>
+                    </div>
 
-                        <div>
-                            <img src="./assets/imagem/PierreGasly.avif" alt="foto do piloto de formula 1: Pierre Gasly">
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/PierreGasly.avif" alt="Pierre Gasly">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Alpine</span>
                             <h3>Pierre Gasly</h3>
-                            <h4>Equipe: Alpine</h4>
-                            <p>Pierre Jean-Jacques Gasly nasceu em Ruão no dia 7 de fevereiro de 1996, é um
-                                automobilista francês que atua na Fórmula 1 pela equipe Alpine. Fez sua estreia na
-                                categoria em 2017 pela Toro Rosso, a partir do Grande Prêmio da Malásia, depois correndo
-                                doze etapas da temporada de 2019 pela Red Bull Racing, e retornando à Toro Rosso a
-                                partir do Grande Prêmio da Bélgica. Sua primeira vitória na Fórmula 1 ocorreu no Grande
-                                Prêmio da Itália de 2020. Em 2023, se transferiu para a Alpine.</p>
+                            <p>Nasceu em Ruão em 07/02/1996. Piloto francês da Alpine. Venceu o GP da Itália em 2020
+                                pela AlphaTauri, um dos resultados mais surpreendentes da era moderna.</p>
                         </div>
                     </div>
-                    <div class="box">
-                        <div>
-                            <img src="./assets/imagem/FrancoColapinto.jpg"
-                                alt="foto do piloto de formula 1: Franco Colapinto">
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/FrancoColapinto.jpg" alt="Franco Colapinto">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Alpine</span>
                             <h3>Franco Colapinto</h3>
-                            <h4>Equipe: Alpine</h4>
-                            <p>Franco Alejandro Colapinto nasceu em Pilar no dia 27 de maio de 2003, é um automobilista
-                                argentino que compete na Fórmula 1 pela equipe Alpine F1 Team. Ele estreou na categoria
-                                em 2024, pela Williams, substituindo Logan Sargeant. Anteriormente, ele competiu no
-                                Campeonato de Fórmula 2 da FIA de 2024 com a equipe MP Motorsport. Ele foi campeão da F4
-                                Espanhola em 2019.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/imagem/IsackHadjar.jpg" alt="foto do piloto de formula 1: Isack Hadjar">
-                            <h3>Isack Hadjar</h3>
-                            <h4>Equipe: Racing bulls</h4>
-                            <p>Isack Alexandre Hadjar nasceu em Paris no dia 28 de setembro de 2004, é um automobilista
-                                franco-argelino que atualmente compete na Fórmula 1 pela equipe Racing Bulls. Disputou o
-                                Campeonato de Fórmula 2 da FIA nos anos de 2023 e 2024, estreando com a equipe Hitech, e
-                                depois se transferindo para a Campos Racing, pela qual foi vice-campeão. Ele foi o
-                                campeão estreante do Campeonato de Fórmula Regional Europeia em 2021 e membro da Red
-                                Bull Junior Team.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/imagem/LiamLawson.jpg" alt="foto do piloto de formula 1: Liam Lawson">
-                            <h3>Liam Lawson</h3>
-                            <h4>Equipe: Racing bulls</h4>
-                            <p>Liam Lawson nasceu em Hastings no dia 11 de fevereiro de 2002, é um automobilista
-                                neozelandês que
-                                atualmente compete na Fórmula 1 pela equipe Racing Bulls.
-                                Estreou na categoria em 2023 com a equipe AlphaTauri, substituindo o titular Daniel
-                                Ricciardo após fratura no braço devido a uma batida no treino livre 2 (TL2) do Grande
-                                Prêmio dos Países Baixos de 2023, e realizou cinco corridas até a recuperação de
-                                Ricciardo. Em 2024, substituiu Ricciardo na Visa Cash App RB em definitivo a partir
-                                do Grande Prêmio dos Estados Unidos. Em 2025, estava programado para disputar a
-                                temporada completa pela Red Bull Racing, mas só competiu com a equipe principal nos
-                                Grandes Prêmios da Austrália e da China. Lawson foi campeão da Toyota Racing Series em
-                                2019 e é membro da Red Bull Junior Team.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/imagem/NicoHulkenberg.jpg"
-                                alt="foto do piloto de formula 1: Nico Hulkenberg">
-                            <h3>Nico Hulkenberg</h3>
-                            <h4>Equipe: Sauber</h4>
-                            <p>Nicolas Hülkenberg, mais conhecido como Nico Hülkenberg nasceu em Emmerich am Rhein no
-                                dia 19 de agosto
-                                de 1987, é um automobilista alemão que atualmente compete na Fórmula 1 pela equipe
-                                Sauber. Ele estreou em 2010 pela equipe Williams, tendo passagens pelas equipes
-                                Sauber, Force India, Renault, Racing Point, Aston Martin e Haas. Ele também venceu
-                                as 24 Horas de Le Mans de 2015.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/imagem/GabrielBortoleto.webp"
-                                alt="foto do piloto de formula 1: Gabriel Bortoleto">
-                            <h3>Gabriel Bortoleto</h3>
-                            <h4>Equipe: Sauber</h4>
-                            <p>Gabriel Lourenzo Bortoleto Oliveira nasceu em Osasco no dia 14 de outubro de 2004, é um
-                                automobilista brasileiro que atualmente compete na Fórmula 1 pela equipe Sauber.
-                                Ele sagrou-se campeão do Campeonato de Fórmula 3 da FIA de 2023 e do Campeonato de
-                                Fórmula 2 da FIA de 2024, ambos como estreante. Bortoleto fez parte do Programa
-                                de Desenvolvimento de Pilotos da McLaren entre 2023 e 2024.</p>
+                            <p>Nasceu em Pilar em 27/05/2003. Piloto argentino que estreou na F1 em 2024 pela Williams
+                                e em 2025 compete pela Alpine F1 Team.</p>
                         </div>
                     </div>
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/IsackHadjar.jpg" alt="Isack Hadjar">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Racing Bulls</span>
+                            <h3>Isack Hadjar</h3>
+                            <p>Nasceu em Paris em 28/09/2004. Piloto franco-argelino, vice-campeão da F2 em 2024 pela
+                                Campos Racing e membro do Red Bull Junior Team.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/LiamLawson.jpg" alt="Liam Lawson">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Racing Bulls</span>
+                            <h3>Liam Lawson</h3>
+                            <p>Nasceu em Hastings em 11/02/2002. Piloto neozelandês do Red Bull Junior Team, competindo
+                                pela Racing Bulls em 2025 após passagem pela Red Bull Racing.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/NicoHulkenberg.jpg" alt="Nico Hulkenberg">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Sauber</span>
+                            <h3>Nico Hulkenberg</h3>
+                            <p>Nasceu em Emmerich am Rhein em 19/08/1987. Piloto alemão com longa carreira na F1,
+                                vencedor das 24 Horas de Le Mans de 2015. Compete pela Sauber em 2025.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-piloto">
+                        <img src="./assets/imagem/GabrielBortoleto.webp" alt="Gabriel Bortoleto">
+                        <div class="card-piloto-info">
+                            <span class="piloto-equipe">Sauber</span>
+                            <h3>Gabriel Bortoleto</h3>
+                            <p>Nasceu em Osasco em 14/10/2004. Piloto brasileiro, campeão da F3 em 2023 e da F2 em 2024
+                                como estreante em ambas. Um dos talentos mais promissores do grid.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
+
+        <!-- ========== EQUIPES ========== -->
         <section id="equipes">
             <div class="container">
-                <h2 class="titulo">equipes</h2>
-                <div class="display-flex">
-                    <img src="./assets/imagem/RedBullLogo.jpg" alt="" height="150px" width="150px">
-                    <div>
-                        <h3>Red Bull</h3>
-                        <p>A Red Bull Racing é uma das equipes mais fortes e vitoriosas da Fórmula 1 moderna. Fundada em
-                            2005, a equipe rapidamente se destacou, conquistando seus primeiros títulos mundiais com
-                            Sebastian Vettel entre 2010 e 2013. Depois de alguns anos de disputa intensa com outras
-                            equipes, a Red Bull voltou a dominar a categoria nos últimos anos, especialmente com o
-                            piloto Max Verstappen, que conquistou seu primeiro campeonato mundial em 2021.
-                            Conhecida por sua inovação técnica, parceria com a Honda (até 2021) e agora motores
-                            próprios, a Red Bull Racing alia desempenho, estratégia afiada e uma equipe técnica top para
-                            competir no mais alto nível. A marca é famosa também pelo design marcante e a energia jovem
-                            que traz ao esporte.</p>
-                        <h2>Carro:</h2>
-                        <div class="display-flex">
-                            <img src="./assets/imagem/CarroRed1.jpg" alt="" width="">
-                            <img src="./assets/imagem/CarroRed2.jpg" alt="" width="">
+                <h2 class="titulo">Equipes</h2>
+
+                <div class="lista-equipes">
+
+                    <div class="card-equipe">
+                        <div class="equipe-header">
+                            <img src="./assets/imagem/RedBullLogo.jpg" alt="Logo Red Bull" class="equipe-logo">
+                            <h3>Red Bull Racing</h3>
+                        </div>
+                        <p>Fundada em 2005, a Red Bull dominou a F1 com Vettel (2010–2013) e voltou ao topo com
+                            Verstappen a partir de 2021. Conhecida pela inovação técnica e agora com motores próprios.</p>
+                        <div class="equipe-carros">
+                            <img src="./assets/imagem/CarroRed1.jpg" alt="Carro Red Bull 1">
+                            <img src="./assets/imagem/CarroRed2.jpg" alt="Carro Red Bull 2">
                         </div>
                     </div>
-                </div>
-                <div class="display-flex">
-                    <img src="./assets/imagem/FerrariLogo.jpg" alt="" height="150px" width="150px">
-                    <div>
-                        <h3>Ferrari</h3>
-                        <p>A Ferrari é a equipe mais antiga e vitoriosa da Fórmula 1. Está presente desde a primeira
-                            temporada do campeonato, em 1950, e é a única que participou de todas as edições desde
-                            então. Com nomes lendários como Niki Lauda, Gilles Villeneuve, Michael Schumacher e
-                            Sebastian Vettel, a Scuderia soma 16 títulos de construtores e 15 de pilotos. Sua base é em
-                            Maranello, Itália, e a paixão dos “tifosi” é uma das maiores forças da equipe. Apesar de
-                            altos e baixos, a Ferrari segue como sinônimo de tradição e prestígio no esporte.</p>
-                        <h2>Carro:</h2>
-                        <div class="display-flex">
-                            <img src="./assets/imagem/CarroFerrari1.avif" alt="" width="">
-                            <img src="./assets/imagem/CarroFerrari2.webp" alt="" width="">
+
+                    <div class="card-equipe">
+                        <div class="equipe-header">
+                            <img src="./assets/imagem/FerrariLogo.jpg" alt="Logo Ferrari" class="equipe-logo">
+                            <h3>Ferrari</h3>
+                        </div>
+                        <p>A equipe mais antiga e vitoriosa da F1, presente desde 1950. Com nomes como Schumacher e
+                            Lauda, acumula 16 títulos de construtores. Sinônimo de tradição e paixão italiana.</p>
+                        <div class="equipe-carros">
+                            <img src="./assets/imagem/CarroFerrari1.avif" alt="Carro Ferrari 1">
+                            <img src="./assets/imagem/CarroFerrari2.webp" alt="Carro Ferrari 2">
                         </div>
                     </div>
-                </div>
-                <div class="display-flex">
-                    <img src="./assets/imagem/mclaren.svg" alt="" height="150px" width="150px">
-                    <div>
-                        <h3>McLaren</h3>
-                        <p>A McLaren foi fundada em 1963 por Bruce McLaren, e se tornou uma potência nas décadas de 70,
-                            80 e 90. Foi campeã com pilotos lendários como Emerson Fittipaldi, Niki Lauda, Ayrton Senna,
-                            Alain Prost e Mika Häkkinen. A equipe é conhecida por sua ousadia técnica e histórico de
-                            grandes duelos na pista. Com sede em Woking, na Inglaterra, a McLaren passou por
-                            dificuldades nos anos 2010, mas voltou a ser competitiva nos últimos anos, especialmente com
-                            Lando Norris e Oscar Piastri. É uma das equipes mais respeitadas e queridas do grid.</p>
-                        <h2>Carro:</h2>
-                        <div class="display-flex">
-                            <img src="./assets/imagem/CarroMcLaren1.jpg" alt="" width="">
-                            <img src="./assets/imagem/CarroMcLaren2.avif" alt="" width="">
+
+                    <div class="card-equipe">
+                        <div class="equipe-header">
+                            <img src="./assets/imagem/mclaren.svg" alt="Logo McLaren" class="equipe-logo">
+                            <h3>McLaren</h3>
+                        </div>
+                        <p>Fundada em 1963, dominou as décadas de 80 e 90 com Senna, Prost e Häkkinen. Voltou a ser
+                            competitiva com Norris e Piastri, e é uma das equipes mais queridas do grid.</p>
+                        <div class="equipe-carros">
+                            <img src="./assets/imagem/CarroMcLaren1.jpg" alt="Carro McLaren 1">
+                            <img src="./assets/imagem/CarroMcLaren2.avif" alt="Carro McLaren 2">
                         </div>
                     </div>
-                </div>
-                <div class="display-flex">
-                    <img src="./assets/imagem/MercedesLogo.png" alt="" height="150px" width="150px">
-                    <div>
-                        <h3>Mercedes</h3>
-                        <p>A Mercedes voltou oficialmente à Fórmula 1 em 2010 como equipe própria, após comprar a campeã
-                            Brawn GP. Mas sua ligação com a F1 vem de muito antes — já tinha vencido corridas nos anos
-                            50 com lendas como Juan Manuel Fangio. A partir de 2014, com a chegada da era híbrida, a
-                            equipe começou um domínio histórico, vencendo 8 títulos consecutivos de construtores e 7 de
-                            pilotos, principalmente com Lewis Hamilton. Com sede em Brackley, Inglaterra, e motores
-                            feitos em Brixworth, a Mercedes é símbolo de engenharia de ponta e domínio técnico.</p>
-                        <h2>Carro:</h2>
-                        <div class="display-flex">
-                            <img src="./assets/imagem/CarroMercedes1.jfif" alt="" width="">
-                            <img src="./assets/imagem/CarroMercedes2.jpg" alt="" width="">
+
+                    <div class="card-equipe">
+                        <div class="equipe-header">
+                            <img src="./assets/imagem/MercedesLogo.png" alt="Logo Mercedes" class="equipe-logo">
+                            <h3>Mercedes</h3>
+                        </div>
+                        <p>Voltou à F1 em 2010 e dominou a era híbrida com 8 títulos consecutivos de construtores.
+                            Símbolo de engenharia de ponta, conquistou 7 títulos com Lewis Hamilton.</p>
+                        <div class="equipe-carros">
+                            <img src="./assets/imagem/CarroMercedes1.jfif" alt="Carro Mercedes 1">
+                            <img src="./assets/imagem/CarroMercedes2.jpg" alt="Carro Mercedes 2">
                         </div>
                     </div>
-                </div>
-                <div class="display-flex">
-                    <img src="./assets/imagem/AstonMartinLogo.jpg" alt="" height="150px" width="150px">
-                    <div>
-                        <h3>Aston Martin</h3>
-                        <p>A Aston Martin voltou à Fórmula 1 como equipe em 2021, substituindo a Racing Point. A marca,
-                            conhecida por seus carros de luxo e associação com James Bond, teve uma passagem curta nos
-                            anos 50, mas só se firmou como equipe de fato no século 21. Desde o retorno, a Aston vem
-                            crescendo, especialmente com Fernando Alonso liderando o time. Sediada em Silverstone e
-                            usando motores Mercedes, a equipe vem investindo pesado em estrutura, aerodinâmica e
-                            pessoal, buscando se consolidar como candidata ao título nos próximos anos.</p>
-                        <h2>Carro:</h2>
-                        <div class="display-flex">
-                            <img src="./assets/imagem/CarroAston1.jpg" alt="" width="">
-                            <img src="./assets/imagem/CarroAston2.webp" alt="" width="">
+
+                    <div class="card-equipe">
+                        <div class="equipe-header">
+                            <img src="./assets/imagem/AstonMartinLogo.jpg" alt="Logo Aston Martin" class="equipe-logo">
+                            <h3>Aston Martin</h3>
+                        </div>
+                        <p>Voltou à F1 em 2021 substituindo a Racing Point. Sediada em Silverstone, vem investindo
+                            pesado em estrutura e tem Fernando Alonso como referência na equipe.</p>
+                        <div class="equipe-carros">
+                            <img src="./assets/imagem/CarroAston1.jpg" alt="Carro Aston Martin 1">
+                            <img src="./assets/imagem/CarroAston2.webp" alt="Carro Aston Martin 2">
                         </div>
                     </div>
-                </div>
-                <div class="display-flex">
-                    <img src="./assets/imagem/WilliamsLogo.avif" alt="" height="150px" width="150px">
-                    <div>
-                        <h3>Williams</h3>
-                        <p>A Williams é uma das equipes mais tradicionais e vitoriosas da Fórmula 1. Foi fundada em 1977
-                            por Frank Williams e logo se tornou referência no esporte, especialmente nos anos 80 e 90,
-                            com campeões como Nelson Piquet, Nigel Mansell, Alain Prost, Damon Hill e Jacques
-                            Villeneuve. Ao todo, venceu 9 títulos de construtores e 7 de pilotos. Com sede em Grove,
-                            Inglaterra, a equipe passou por uma fase difícil nos últimos anos, mas está em reconstrução,
-                            apostando em pilotos experientes e em melhorias técnicas para voltar ao topo.</p>
-                        <h2>Carro:</h2>
-                        <div class="display-flex">
-                            <img src="./assets/imagem/CarroWilliams1.jpg" alt="" width="">
-                            <img src="./assets/imagem/CarroWilliams2.avif" alt="" width="">
+
+                    <div class="card-equipe">
+                        <div class="equipe-header">
+                            <img src="./assets/imagem/WilliamsLogo.avif" alt="Logo Williams" class="equipe-logo">
+                            <h3>Williams</h3>
+                        </div>
+                        <p>Uma das mais tradicionais, com 9 títulos de construtores nos anos 80 e 90. Passou por uma
+                            fase difícil mas está em reconstrução apostando em pilotos experientes como Sainz.</p>
+                        <div class="equipe-carros">
+                            <img src="./assets/imagem/CarroWilliams1.jpg" alt="Carro Williams 1">
+                            <img src="./assets/imagem/CarroWilliams2.avif" alt="Carro Williams 2">
                         </div>
                     </div>
-                </div>
-                <div class="display-flex">
-                    <img src="./assets/imagem/RacingBulls.jpg" alt="" height="150px" width="150px">
-                    <div>
-                        <h3>Racing Bulls</h3>
-                        <p>Essa equipe começou como Toro Rosso, criada em 2006 pela Red Bull para desenvolver novos
-                            talentos. Foi rebatizada como AlphaTauri em 2020, promovendo a marca de moda da empresa, e
-                            virou Racing Bulls em 2024, com foco renovado em performance. Apesar de ser considerada a
-                            “equipe B” da Red Bull, já teve bons momentos — como a vitória de Sebastian Vettel no GP da
-                            Itália em 2008 e de Pierre Gasly em 2020. Seu papel principal é formar e avaliar jovens
-                            pilotos antes que eles subam para a equipe principal da Red Bull Racing.</p>
-                        <h2>Carro:</h2>
-                        <div class="display-flex">
-                            <img src="./assets/imagem/CarroRacing1.webp" alt="" width="">
-                            <img src="./assets/imagem/CarroRacing1.webp" alt="" width="">
+
+                    <div class="card-equipe">
+                        <div class="equipe-header">
+                            <img src="./assets/imagem/RacingBulls.jpg" alt="Logo Racing Bulls" class="equipe-logo">
+                            <h3>Racing Bulls</h3>
+                        </div>
+                        <p>Começou como Toro Rosso em 2006 para desenvolver talentos da Red Bull. Rebatizada para
+                            AlphaTauri em 2020 e Racing Bulls em 2024. Formou pilotos como Vettel e Verstappen.</p>
+                        <div class="equipe-carros">
+                            <img src="./assets/imagem/CarroRacing1.webp" alt="Carro Racing Bulls 1">
+                            <img src="./assets/imagem/CarroRacing1.webp" alt="Carro Racing Bulls 2">
                         </div>
                     </div>
-                </div>
-                <div class="display-flex">
-                    <img src="./assets/imagem/HaasLogo.png" alt="" height="150px" width="150px">
-                    <div>
-                        <h3>Haas</h3>
-                        <p>A Haas é a única equipe norte-americana do grid atual. Estreou na Fórmula 1 em 2016, fundada
-                            por Gene Haas, também dono de equipe na NASCAR. Desde então, vem buscando se consolidar como
-                            uma equipe eficiente e competitiva, mesmo com orçamento mais limitado. Usa motores e
-                            componentes da Ferrari e tem sede nos Estados Unidos, com operação técnica na Europa. A Haas
-                            costuma apostar em jovens talentos e pilotos experientes para encontrar equilíbrio, e sua
-                            trajetória é marcada pela persistência no pelotão intermediário.</p>
-                        <h2>Carro:</h2>
-                        <div class="display-flex">
-                            <img src="./assets/imagem/CarroHaas1.jpg" alt="" width="">
-                            <img src="./assets/imagem/CarroHaas2.jpg" alt="" width="">
+
+                    <div class="card-equipe">
+                        <div class="equipe-header">
+                            <img src="./assets/imagem/HaasLogo.png" alt="Logo Haas" class="equipe-logo">
+                            <h3>Haas</h3>
+                        </div>
+                        <p>Única equipe norte-americana do grid atual, estreou em 2016. Usa motores e componentes da
+                            Ferrari e tem sede nos EUA, com operação técnica na Europa.</p>
+                        <div class="equipe-carros">
+                            <img src="./assets/imagem/CarroHaas1.jpg" alt="Carro Haas 1">
+                            <img src="./assets/imagem/CarroHaas2.jpg" alt="Carro Haas 2">
                         </div>
                     </div>
-                </div>
-                <div class="display-flex">
-                    <img src="./assets/imagem/AlpineLogo.webp" alt="" height="150px" width="150px">
-                    <div>
-                        <h3>Alpine</h3>
-                        <p>A Alpine nasceu como marca na década de 50 na França, mas entrou na F1 como equipe em 2021,
-                            assumindo o lugar da Renault. Na verdade, é a mesma base que correu como Benetton nos anos
-                            90 (onde Schumacher foi bicampeão) e como Renault nos anos 2000 (quando Alonso venceu seus
-                            dois títulos). Com sede em Enstone, na Inglaterra, e motores feitos na França, a Alpine
-                            representa o esforço francês na Fórmula 1 moderna. Tem como objetivo misturar tradição,
-                            inovação e talento jovem para voltar ao topo do esporte.</p>
-                        <h2>Carro:</h2>
-                        <div class="display-flex">
-                            <img src="./assets/imagem/CarroAlpine1.avif" alt="" width="">
-                            <img src="./assets/imagem/CarroAlpine2.jpg" alt="" width="">
+
+                    <div class="card-equipe">
+                        <div class="equipe-header">
+                            <img src="./assets/imagem/AlpineLogo.webp" alt="Logo Alpine" class="equipe-logo">
+                            <h3>Alpine</h3>
+                        </div>
+                        <p>Mesma base que correu como Benetton (bicampeonatos de Schumacher) e Renault (títulos de
+                            Alonso). Representa o esforço francês na F1 moderna, com sede em Enstone.</p>
+                        <div class="equipe-carros">
+                            <img src="./assets/imagem/CarroAlpine1.avif" alt="Carro Alpine 1">
+                            <img src="./assets/imagem/CarroAlpine2.jpg" alt="Carro Alpine 2">
                         </div>
                     </div>
-                </div>
-                <div class="display-flex">
-                    <img src="./assets/imagem/SauberLogo.png" alt="" height="150px" width="150px">
-                    <div>
-                        <h3>Sauber</h3>
-                        <p>A equipe Sauber começou na F1 em 1993 como uma equipe suíça independente. Passou por
-                            diferentes fases — correu como BMW Sauber entre 2006 e 2009 e voltou ao nome Sauber depois.
-                            Em 2019, virou Alfa Romeo Racing, mantendo a base suíça, mas com nome de patrocinador. Em
-                            2024, a equipe voltou a usar o nome Sauber (agora como Kick Sauber), preparando-se para a
-                            transição oficial para Audi em 2026. É uma equipe conhecida por sua competência técnica e
-                            por desenvolver talentos, mesmo sem grandes recursos.</p>
-                        <h2>Carro:</h2>
-                        <div class="display-flex">
-                            <img src="./assets/imagem/CarroSauber1.jpg" alt="" width="">
-                            <img src="./assets/imagem/CarroSauber2.webp" alt="" width="">
+
+                    <div class="card-equipe">
+                        <div class="equipe-header">
+                            <img src="./assets/imagem/SauberLogo.png" alt="Logo Sauber" class="equipe-logo">
+                            <h3>Sauber</h3>
+                        </div>
+                        <p>Equipe suíça independente desde 1993. Passou por BMW Sauber, Alfa Romeo e Kick Sauber.
+                            Prepara-se para a transição oficial para Audi em 2026.</p>
+                        <div class="equipe-carros">
+                            <img src="./assets/imagem/CarroSauber1.jpg" alt="Carro Sauber 1">
+                            <img src="./assets/imagem/CarroSauber2.webp" alt="Carro Sauber 2">
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
+
+        <!-- ========== GRANDES PRÊMIOS ========== -->
         <section id="GPs">
             <div class="container">
-                <h1 class="titulo">O que é um GP?</h1>
-                <p>Os GPs, ou Grandes Prêmios, são as corridas que compõem o campeonato mundial de Fórmula 1. Cada GP é
-                    um
-                    evento único realizado em um circuito diferente, geralmente em países diversos ao redor do mundo.
-                    Durante a temporada, que costuma ter 24 GPs, os pilotos competem para conquistar o melhor
-                    resultado possível em cada corrida. O desempenho em cada GP rende pontos que são somados ao longo do
-                    campeonato, definindo o campeão mundial de pilotos e também o campeão entre as equipes, chamadas
-                    construtores.
-                    O termo “Grande Prêmio” reflete a importância e o prestígio de cada corrida, que reúne os melhores
-                    pilotos e equipes do automobilismo em uma disputa de alta velocidade, tecnologia e estratégia. Cada
-                    GP é
-                    realizado geralmente durante um fim de semana, que inclui treinos livres, uma sessão classificatória
-                    para definir o grid de largada e a corrida principal no domingo.
-                    Assim, os Grandes Prêmios são as etapas fundamentais que compõem a Fórmula 1, e seu conjunto forma o
-                    campeonato que os fãs acompanham ano após ano para ver quem será o melhor piloto e equipe da
-                    temporada.
+                <h2 class="titulo">Grandes Prêmios 2025</h2>
+
+                <p class="texto-intro">
+                    Os GPs são as corridas que compõem o campeonato. Cada Grande Prêmio acontece em um circuito
+                    diferente, geralmente durante um fim de semana com treinos livres, classificação e corrida principal.
+                    A temporada de 2025 conta com 24 GPs ao redor do mundo.
                 </p>
-                <h1 class="titulo">GP`s</h1>
 
-                <div class="display-flex">
-                    <div class="box">
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/AustraliaBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Austrália - Helbourne</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/AustraliaCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 14/03 - 16/03</h3>
-                                <p>O primeiro GP da Austrália foi realizado em 1985 no circuito de rua de Adelaide. Em
-                                    1996, mudou-se para o moderno Albert Park — um traçado semi-urbano desenhado pelo
-                                    arquiteto Ron Walker — estreando em março daquele ano. O evento marcou o início da
-                                    temporada por muitos anos, remetendo à rica tradição do país que sediou corridas
-                                    desde os anos 1920.</p>
-                            </div>
+                <div class="grid-gps">
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/AustraliaBandeira.png" alt="Bandeira Austrália">
+                            <span>Austrália — Melbourne</span>
                         </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/ChinaBandeira.svg" alt="" width="30px" height="30px">
-                                <h1>China - Shanghai</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/ChinaCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 21/03 - 23/03</h3>
-                                <p>Inaugurado em 2004, o traçado de Xangai foi projetado por Hermann Tilke com
-                                    inspiração na forma de concha. Logo se tornou um dos circuitos mais tecnológicos,
-                                    com zonas amplas de escape e longas retas. O GP foi interrompido entre 2019–2023 por
-                                    causa da COVID‑19, e retornou de forma triunfal em 2024.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/JapaoBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Japão - Suzuka</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/JapaoCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 04/04 - 06/04</h3>
-                                <p>Suzuka, inaugurado em 1962 pela Honda, é um circuito com layout em “8”, desenhado por
-                                    John Hugenholtz. Recebeu seu primeiro GP em 1976 (em Fuji), mas realizou a maioria
-                                    das edições a partir de 1987. É famoso por curvas técnicas como 130R e o S de
-                                    Degner.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/BahreinBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Bahrein</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/BahreinCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 11/04 - 13/04</h3>
-                                <p>Lançado em 2004, o GP do Bahrein foi o primeiro do Oriente Médio. O circuito de
-                                    Sakhir, projetado por Tilke, foi a primeira pista moderna a adotar iluminação para
-                                    corridas noturnas, criando visuais espetaculares sob os refletores.</p>
-                            </div>
+                        <img src="./assets/imagem/AustraliaCircuito.avif" alt="Circuito Austrália" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 14/03 — 16/03</span>
+                            <p>O Albert Park recebeu seu primeiro GP em 1996. Traçado semi-urbano desenhado por Ron
+                                Walker, marcou o início da temporada por muitos anos.</p>
                         </div>
                     </div>
 
-                    <div class="box">
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/ArabiaSauditaBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Arabia Saudita - Jeddah</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/ArabiaSauditaCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 18/04 - 18/04</h3>
-                                <p>O traçado de rua de Jeddah fez sua estreia em 2021. Com 27 curvas estreitas e longas
-                                    retas, ele é o segundo GP mais rápido e o mais longo em extensão no calendário
-                                    (cerca de 6,2 km), projetado por Tilke para maximizar velocidade e drama noturno.
-                                </p>
-                            </div>
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/ChinaBandeira.svg" alt="Bandeira China">
+                            <span>China — Shanghai</span>
                         </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/EstadosUnidosBandeira.png" alt="" width="30px" height="30px">
-                                <h1>China - Shanghai</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/MiamiCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 02/05 - 04/05</h3>
-                                <p>O GP de Miami foi adicionado em 2022. A pista foi criada especialmente ao redor do
-                                    estádio Hard Rock, na orla da Biscayne Bay. A ampliação da glória de Mônaco e Las
-                                    Vegas trouxe glamour automobilístico à “Cidade da Baía”.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/ItaliaBandeira.svg" alt="" width="30px" height="30px">
-                                <h1>Itália - Ímola</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/EmiliaRomagnaCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 16/05 - 18/05</h3>
-                                <p>Imola sediou o GP de São Marino entre 1981 e 2006 antes de retornar em 2020 como o GP
-                                    da Emília‑Romagna. Com trechos como Tamburello e Acque Minerali, é um traçado
-                                    técnico e rápido no coração da Itália, perto de Faenza.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/MonacoBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Mônaco - Monte Carlo</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/MonacoCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 23/05 - 25/05</h3>
-                                <p>Criado em 1929 por Antony Noghès, o GP de Mônaco é disputado nas estreitas ruas do
-                                    principado. Presente lá desde 1950, ficou famoso pelas curvas de Sainte‑Dévote,
-                                    Loews e Mirabeau, e visto como o auge de prestígio na F1.</p>
-                            </div>
+                        <img src="./assets/imagem/ChinaCircuito.avif" alt="Circuito China" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 21/03 — 23/03</span>
+                            <p>Inaugurado em 2004, projetado por Hermann Tilke com inspiração em concha. Retornou
+                                triunfalmente em 2024 após interrupção pela COVID-19.</p>
                         </div>
                     </div>
 
-                    <div class="box">
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/EspanhaBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Espanha - Barcelona</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/BarcelonaCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 30/05 - 01/06</h3>
-                                <p>Embora o primeiro GP da Espanha tenha sido em 1951 em Pedralbes, o traçado fixo em
-                                    Barcelona foi inaugurado em 1991. Tem curvas que testam o equilíbrio e desgaste de
-                                    pneus, sendo palco tradicional de testes de pré-temporada.</p>
-                            </div>
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/JapaoBandeira.png" alt="Bandeira Japão">
+                            <span>Japão — Suzuka</span>
                         </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/CanadaBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Canadá - Montreal</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/CanadaCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 13/06 - 15/06</h3>
-                                <p>Inaugurado em 1967 com layout em ilhota, o circuito de Montreal foi renomeado em
-                                    homenagem ao campeão Gilles Villeneuve. Conhecido pelos muros próximos e chuva
-                                    frequente, oferece sempre bastante emoção.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/AustriaBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Áustria - Red Bull Ring</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/AustriaCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 27/06 - 29/06</h3>
-                                <p>Originalmente construído em Zeltweg em 1964, o traçado atual — nomeado Red Bull Ring
-                                    desde 2011 — é uma versão compacta (4,3 km) do antigo e conta com subidas/descidas
-                                    são acarreadas por Bernhard Tilke.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/ReinoUnidoBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Reino Unido - Silverstone</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/SilverstoneCircuit.png" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 04/07 - 06/07</h3>
-                                <p>O primeiro GP oficial da F1 foi realizado em 1950 em Silverstone, um antigo aeródromo
-                                    da RAF. Com curvas lendárias como Copse, Maggotts e Becketts, é considerado o berço
-                                    do esporte.</p>
-                            </div>
+                        <img src="./assets/imagem/JapaoCircuito.avif" alt="Circuito Japão" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 04/04 — 06/04</span>
+                            <p>Inaugurado em 1962 pela Honda, é o único circuito em forma de "8". Famoso pelas
+                                curvas técnicas como 130R e o S de Degner.</p>
                         </div>
                     </div>
 
-                    <div class="box">
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/BelgicaBandeira.png" alt="" width="30px" height="30px">
-                                <h1>spa francorchamps - Belgica</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/spaCircuit.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 00/00 - 00/00</h3>
-                                <p>Criado em 1921 como corrida de turismo, o GP da Bélgica migrou para Spa em 1925,
-                                    conhecido por seu traçado sinuoso e clima imprevisível.
-                                    Spa foi cenário de grandes dramas e vitórias lendárias; fechou entre 1970 e 1982 por
-                                    segurança e voltou reformado em 1983.
-                                    O circuito mantém charme e dificuldade, sendo dos favoritos dos pilotos.</p>
-                            </div>
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/BahreinBandeira.png" alt="Bandeira Bahrein">
+                            <span>Bahrein</span>
                         </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/HungariaBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Hungria - Hungaroring</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/HungriaCircuit.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 01/08 - 03/08</h3>
-                                <p>Estreou em 1986 como primeiro GP em país do Bloco de Leste. O traçado é travado,
-                                    comparado a rua, e exige downforce. Fica próximo a Budapeste, circulando o lago
-                                    Memento.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/HolandaBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Holanda - Zandvoort</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/ZantvoordCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 29/08 - 31/08</h3>
-                                <p>Circuito de rua junto ao mar do Norte, velho desde os anos 1950, retornou em 2021
-                                    após reformas que adicionaram curvas inclinadas, como Tarzan e a banked “Arie
-                                    Luyendyk”.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/ItaliaBandeira.svg" alt="" width="30px" height="30px">
-                                <h1>Ítalia - Monza</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/MonzaCircuit.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 05/09 - 07/09</h3>
-                                <p>Igual a 1921, Monza é uma das pistas mais antigas. Famosa pelas retas e curvas
-                                    velozes como Lesmo e Parabolica, oferece plateia apaixonada e atmosfera única de
-                                    tifosi.</p>
-                            </div>
+                        <img src="./assets/imagem/BahreinCircuito.avif" alt="Circuito Bahrein" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 11/04 — 13/04</span>
+                            <p>Primeiro GP do Oriente Médio, lançado em 2004. O circuito de Sakhir foi pioneiro
+                                na iluminação para corridas noturnas.</p>
                         </div>
                     </div>
 
-                    <div class="box">
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/AzerbaijãoBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Azerbaijão - Baku</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/BakuCircuit.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 19/09 - 21/09</h3>
-                                <p>Existindo desde 2016, esse traçado urbano percorre becos históricos de Baku até a
-                                    Praça da Família Flamejante. Mistura longas retas com setores técnicos intensos,
-                                    ideal para ultrapassagens.</p>
-                            </div>
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/ArabiaSauditaBandeira.png" alt="Bandeira Arabia Saudita">
+                            <span>Arábia Saudita — Jeddah</span>
                         </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/SingapuraBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Singapura - Marina Bay</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/HungriaCircuit.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 03/10 - 05/10</h3>
-                                <p>Debutou em 2008 como o primeiro GP noturno da história, em ruas de Marina Bay – foi
-                                    um marco, ganhando fama por ser difícil fisicamente e tecnologicamente.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/EstadosUnidosBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Estados Unidos - Austin</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/AustinCircuit.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 17/10 - 19/10</h3>
-                                <p>Construído em 2012 perto de Austin, Texas, o COTA foi desenhado por Tilke com
-                                    inspiração em traçados europeus. Destaca-se por altimetria e a colina na Curva 1,
-                                    sendo o lar do GP dos EUA e sprint desde 2025.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/MexicoBandeira.png" alt="" width="30px" height="30px">
-                                <h1>México - México city</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/MexicoCircuit.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 24/10 - 26/10</h3>
-                                <p>Realizou corridas em 1962, e novamente a partir de 2015. Recebeu melhorias antes do
-                                    retorno, como a “Curva do Saci” e alta altitude que desafia os motores. AD.</p>
-                            </div>
+                        <img src="./assets/imagem/ArabiaSauditaCircuito.avif" alt="Circuito Arabia Saudita" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 18/04 — 20/04</span>
+                            <p>Traçado de rua estreou em 2021 com 27 curvas e longas retas. É o segundo GP mais
+                                rápido e o mais longo em extensão do calendário (6,2 km).</p>
                         </div>
                     </div>
 
-                    <div class="box">
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/BrasilBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Brasil - Interlagos</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/InterlagosCircuit.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 07/11 - 09/11</h3>
-                                <p>O GP brasileiro existe desde 1973; desde 1990 em Interlagos, pista tradicional com
-                                    retas curtas e subidas. A proximidade com os fãs garante sempre um clima vibrante,
-                                    agora com sprint desde 2025.</p>
-                            </div>
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/EstadosUnidosBandeira.png" alt="Bandeira EUA">
+                            <span>EUA — Miami</span>
                         </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/EstadosUnidosBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Estados Unidos - Las Vegas</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/LasVegasCircuit.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 21/11 - 23/11</h3>
-                                <p>Retornou em 2023 como corrida noturna nas ruas da Strip. Longo traçado (6,12 km),
-                                    curvas amplas e reta iluminada fazem dele um espetáculo temático urbano e festivo.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/QatarBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Qatar - Lusail</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/QatarCircuito.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 28/11 - 30/11</h3>
-                                <p>Estreou em 2021 com projeto focado em corridas noturnas. O Lusail International
-                                    Circuit tem ampla infraestrutura e iluminação para GP confortável e estável no
-                                    deserto.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="pais">
-                                <img src="./assets/imagem/EmiradosArabesBandeira.png" alt="" width="30px" height="30px">
-                                <h1>Abu Dhabi - Yas Marina</h1>
-                            </div>
-                            <div>
-                                <img src="./assets/imagem/YasMarinaCircuit.avif" alt="" srcset="" width="150px"
-                                    height="150px">
-                                <h3>Data em que vai ocorrer: 05/12 - 07/12</h3>
-                                <p>Desde 2009 no Yas Marina Circuit, com GP dia‑noite, paisagem moderna e marina como
-                                    pano de fundo. Notável trecho sob passarela e pit-lane iluminada.</p>
-                            </div>
+                        <img src="./assets/imagem/MiamiCircuito.avif" alt="Circuito Miami" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 02/05 — 04/05</span>
+                            <p>Adicionado ao calendário em 2022. A pista foi criada ao redor do estádio Hard Rock,
+                                na orla da Biscayne Bay.</p>
                         </div>
                     </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/ItaliaBandeira.svg" alt="Bandeira Itália">
+                            <span>Itália — Ímola</span>
+                        </div>
+                        <img src="./assets/imagem/EmiliaRomagnaCircuito.avif" alt="Circuito Ímola" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 16/05 — 18/05</span>
+                            <p>Sediou o GP de São Marino de 1981 a 2006. Retornou em 2020 como GP da
+                                Emília-Romagna. Traçado técnico com trechos como Tamburello.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/MonacoBandeira.png" alt="Bandeira Monaco">
+                            <span>Mônaco — Monte Carlo</span>
+                        </div>
+                        <img src="./assets/imagem/MonacoCircuito.avif" alt="Circuito Monaco" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 23/05 — 25/05</span>
+                            <p>Criado em 1929, é o GP mais famoso da F1. Disputado nas estreitas ruas do
+                                principado, é visto como o auge do prestígio no automobilismo.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/EspanhaBandeira.png" alt="Bandeira Espanha">
+                            <span>Espanha — Barcelona</span>
+                        </div>
+                        <img src="./assets/imagem/BarcelonaCircuito.avif" alt="Circuito Barcelona" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 30/05 — 01/06</span>
+                            <p>O traçado fixo em Barcelona foi inaugurado em 1991. Testa equilíbrio e desgaste de
+                                pneus, sendo palco tradicional de testes de pré-temporada.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/CanadaBandeira.png" alt="Bandeira Canadá">
+                            <span>Canadá — Montreal</span>
+                        </div>
+                        <img src="./assets/imagem/CanadaCircuito.avif" alt="Circuito Montreal" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 13/06 — 15/06</span>
+                            <p>Inaugurado em 1967, renomeado em homenagem ao lendário Gilles Villeneuve. Muros
+                                próximos e chuva frequente garantem sempre bastante emoção.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/AustriaBandeira.png" alt="Bandeira Áustria">
+                            <span>Áustria — Red Bull Ring</span>
+                        </div>
+                        <img src="./assets/imagem/AustriaCircuito.avif" alt="Circuito Red Bull Ring" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 27/06 — 29/06</span>
+                            <p>Construído originalmente em Zeltweg em 1964. O Red Bull Ring atual (desde 2011)
+                                é compacto (4,3 km) com subidas e descidas marcantes.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/ReinoUnidoBandeira.png" alt="Bandeira Reino Unido">
+                            <span>Reino Unido — Silverstone</span>
+                        </div>
+                        <img src="./assets/imagem/SilverstoneCircuit.png" alt="Circuito Silverstone" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 04/07 — 06/07</span>
+                            <p>O berço da Fórmula 1. O primeiro GP oficial aconteceu aqui em 1950. Com curvas
+                                lendárias como Copse, Maggotts e Becketts.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/BelgicaBandeira.png" alt="Bandeira Bélgica">
+                            <span>Bélgica — Spa-Francorchamps</span>
+                        </div>
+                        <img src="./assets/imagem/spaCircuit.avif" alt="Circuito Spa" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> A confirmar</span>
+                            <p>Criado em 1921, o GP da Bélgica migrou para Spa em 1925. Famoso pelo clima
+                                imprevisível e considerado o favorito dos pilotos.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/HungariaBandeira.png" alt="Bandeira Hungria">
+                            <span>Hungria — Hungaroring</span>
+                        </div>
+                        <img src="./assets/imagem/HungriaCircuit.avif" alt="Circuito Hungaroring" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 01/08 — 03/08</span>
+                            <p>Estreou em 1986 como primeiro GP em país do Bloco de Leste. Traçado travado que
+                                exige alto downforce, próximo a Budapeste.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/HolandaBandeira.png" alt="Bandeira Holanda">
+                            <span>Holanda — Zandvoort</span>
+                        </div>
+                        <img src="./assets/imagem/ZantvoordCircuito.avif" alt="Circuito Zandvoort" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 29/08 — 31/08</span>
+                            <p>Circuito junto ao Mar do Norte, ativo desde os anos 50. Retornou em 2021 após
+                                reformas com curvas inclinadas únicas como a "Arie Luyendyk".</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/ItaliaBandeira.svg" alt="Bandeira Itália">
+                            <span>Itália — Monza</span>
+                        </div>
+                        <img src="./assets/imagem/MonzaCircuit.avif" alt="Circuito Monza" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 05/09 — 07/09</span>
+                            <p>Desde 1921, Monza é uma das pistas mais antigas. Famosa pelas retas e curvas
+                                velozes, com a torcida apaixonada dos tifosi criando uma atmosfera única.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/AzerbaijãoBandeira.png" alt="Bandeira Azerbaijão">
+                            <span>Azerbaijão — Baku</span>
+                        </div>
+                        <img src="./assets/imagem/BakuCircuit.avif" alt="Circuito Baku" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 19/09 — 21/09</span>
+                            <p>Desde 2016, percorre becos históricos de Baku. Mistura longas retas com setores
+                                técnicos intensos, ideal para ultrapassagens surpreendentes.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/SingapuraBandeira.png" alt="Bandeira Singapura">
+                            <span>Singapura — Marina Bay</span>
+                        </div>
+                        <img src="./assets/imagem/HungriaCircuit.avif" alt="Circuito Singapura" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 03/10 — 05/10</span>
+                            <p>Estreou em 2008 como o primeiro GP noturno da história. Nas ruas de Marina Bay,
+                                é fisicamente e tecnicamente um dos mais desafiadores.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/EstadosUnidosBandeira.png" alt="Bandeira EUA">
+                            <span>EUA — Austin (COTA)</span>
+                        </div>
+                        <img src="./assets/imagem/AustinCircuit.avif" alt="Circuito Austin" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 17/10 — 19/10</span>
+                            <p>Construído em 2012 perto de Austin, Texas. Projetado por Tilke com inspiração em
+                                traçados europeus e destaque para a colina na Curva 1.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/MexicoBandeira.png" alt="Bandeira México">
+                            <span>México — Cidade do México</span>
+                        </div>
+                        <img src="./assets/imagem/MexicoCircuit.avif" alt="Circuito México" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 24/10 — 26/10</span>
+                            <p>Realizou corridas em 1962 e retornou em 2015 com melhorias. A alta altitude
+                                desafia os motores e cria dinâmicas únicas de corrida.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/BrasilBandeira.png" alt="Bandeira Brasil">
+                            <span>Brasil — Interlagos</span>
+                        </div>
+                        <img src="./assets/imagem/InterlagosCircuit.avif" alt="Circuito Interlagos" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 07/11 — 09/11</span>
+                            <p>O GP brasileiro existe desde 1973, em Interlagos desde 1990. A pista é apaixonante
+                                e a proximidade com os fãs garante sempre um clima vibrante.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/EstadosUnidosBandeira.png" alt="Bandeira EUA">
+                            <span>EUA — Las Vegas</span>
+                        </div>
+                        <img src="./assets/imagem/LasVegasCircuit.avif" alt="Circuito Las Vegas" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 21/11 — 23/11</span>
+                            <p>Retornou em 2023 como corrida noturna nas ruas da Strip. Longo traçado de 6,12 km
+                                com reta iluminada e visual espetacular.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/QatarBandeira.png" alt="Bandeira Qatar">
+                            <span>Qatar — Lusail</span>
+                        </div>
+                        <img src="./assets/imagem/QatarCircuito.avif" alt="Circuito Qatar" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 28/11 — 30/11</span>
+                            <p>Estreou em 2021 com foco em corridas noturnas. O Lusail International Circuit
+                                tem ampla infraestrutura para uma experiência confortável no deserto.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-gp">
+                        <div class="gp-pais">
+                            <img src="./assets/imagem/EmiradosArabesBandeira.png" alt="Bandeira Emirados">
+                            <span>Abu Dhabi — Yas Marina</span>
+                        </div>
+                        <img src="./assets/imagem/YasMarinaCircuit.avif" alt="Circuito Abu Dhabi" class="gp-circuito">
+                        <div class="gp-info">
+                            <span class="gp-data"><i class="fa-regular fa-calendar"></i> 05/12 — 07/12</span>
+                            <p>Desde 2009 encerra a temporada. GP dia-noite com paisagem moderna e marina como
+                                pano de fundo. Trecho sob passarela é um dos mais icônicos.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <section id="aviso">
-            <div class="container">
-                <h3 class="titulo">Aviso Importante</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat earum et sapiente adipisci natus
-                    aspernatur incidunt atque, in, iure officia dolor, odit beatae facilis iste? Iusto fugiat molestiae
-                    iure laboriosam.</p>
-                <a href="" class="btn">Botão</a>
-            </div>
-        </section>
 
+        <!-- ========== CONTATO ========== -->
         <section id="contato">
             <div class="container">
-                <form action="">
-                    <h3>Contato</h3>
-                    <label for="">Nome</label>
-                    <input type="text" placeholder="Digite seu nome">
+                <h2 class="titulo">Contato</h2>
 
-                    <label for="">E-mail</label>
-                    <input type="email" placeholder="Digite seu e-mail">
+                <div class="contato-grid">
 
-                    <label for="">Telefone</label>
-                    <input type="tel" placeholder="Digite seu telefone">
+                    <!-- Formulário -->
+                    <form class="formulario">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
 
-                    <label for="">Assunto</label>
-                    <select name="opcao" id="">
-                        <option value="">Selecione o assunto</option>
-                        <option value="">Assunto 1</option>
-                        <option value="">Assunto 2</option>
-                        <option value="">Assunto 3</option>
-                    </select>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail">
 
-                    <label for="">Mensagem</label>
-                    <textarea name="" id="" placeholder="Digite sua mensagem"></textarea>
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" placeholder="(11) 99999-9999">
 
-                    <div class="btn-formulario">
-                        <input type="submit" value="Enviar" class="btn">
+                        <label for="assunto">Assunto</label>
+                        <select name="assunto" id="assunto">
+                            <option value="">Selecione o assunto</option>
+                            <option value="informacoes">Informações gerais</option>
+                            <option value="pilotos">Sobre os pilotos</option>
+                            <option value="equipes">Sobre as equipes</option>
+                            <option value="outros">Outros</option>
+                        </select>
+
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" placeholder="Digite sua mensagem"></textarea>
+
+                        <div class="btn-formulario">
+                            <button type="submit" class="btn-primario">Enviar mensagem</button>
+                        </div>
+                    </form>
+
+                    <!-- Informações de contato -->
+                    <div class="contato-info">
+                        <h3>Fale conosco</h3>
+                        <p>Tem alguma dúvida, sugestão ou quer saber mais sobre a Fórmula 1? Entre em contato!</p>
+
+                        <ul class="contato-lista">
+                            <li>
+                                <i class="fa-solid fa-square-envelope"></i>
+                                <a href="mailto:contato@email.com">contato@email.com</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-retro"></i>
+                                <a href="tel:11999999999">(11) 99999-9999</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:1133333333">(11) 3333-3333</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Rua Tito, 54 — Vila Romana, São Paulo/SP</span>
+                            </li>
+                        </ul>
+
+                        <!-- Mapa -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.122782716492!2d-46.6917602!3d-23.528085899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8775663b04f%3A0x923835e9005f8309!2sSenac%20Lapa%20Tito!5e0!3m2!1spt-BR!2sbr!4v1750772012498!5m2!1spt-BR!2sbr"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localização no mapa">
+                        </iframe>
                     </div>
-                </form>
 
-                <div>
-                    <h3>Dispomos de um time excepcional e altamente comprometido, dedicado ao seu bem-estar</h3>
-                    <p><a href=""> <i class="fa-solid fa-square-envelope"></i> contato@email.com</a></p>
-                    <p><a href=""> <i class="fa-solid fa-mobile-retro"></i> 11 99999-9999</a></p>
-                    <p><a href=""><i class="fa-solid fa-phone"></i> 11 33333-3333</a></p>
-                    <p><a href=""><i class="fa-solid fa-location-dot"></i> Rua Tito, 54 - Vila Romana, São Paulo/SP,
-                            05051-000</a></p>
                 </div>
             </div>
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.122782716492!2d-46.6917602!3d-23.528085899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8775663b04f%3A0x923835e9005f8309!2sSenac%20Lapa%20Tito!5e0!3m2!1spt-BR!2sbr!4v1750772012498!5m2!1spt-BR!2sbr"
-                width="" height="" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
+
     </main>
 
+
+    <!-- ========== BOTÃO VOLTAR AO TOPO ========== -->
     <div id="topo">
-        <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+        <a href="#home" aria-label="Voltar ao topo">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
     </div>
 
-    <footer>
-        <p>Desenvolvido por Marcos Carreiro</p>
-    </footer>
-</body>
 
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container footer-inner">
+            <p>Desenvolvido por <span class="destaque-vermelho">Samuel Ferreira</span></p>
+            <p class="footer-copy">© 2025 Fórmula 1 Fan Page</p>
+        </div>
+    </footer>
+
+
+    <!-- JS -->
+    <script src="./assets/js/script.js"></script>
+
+</body>
 </html>
