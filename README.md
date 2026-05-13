@@ -4,223 +4,161 @@
 
 ---
 
-# Fórmula 1 — Temporada 2025
+# Fórmula 1 — Fan Page Temporada 2025
 
-Projeto front-end desenvolvido com foco em experiência visual, responsividade e organização profissional de código, trazendo informações completas sobre a temporada 2025 da Fórmula 1.
-
-A aplicação apresenta pilotos, equipes, grandes prêmios e uma interface moderna inspirada na identidade visual da categoria.
+Página web dedicada à temporada 2025 da Fórmula 1, apresentando informações sobre pilotos, equipes e os Grandes Prêmios do campeonato. Projeto desenvolvido como parte do aprendizado em desenvolvimento web front-end.
 
 ---
 
-## Deploy
+## Índice
 
-Projeto online:  
-https://projetof1.netlify.app/
-
----
-
-## Objetivos do Projeto
-
-- Construir uma interface moderna e responsiva
-- Aplicar boas práticas de HTML e CSS
-- Estruturar um projeto front-end com arquitetura limpa
-- Trabalhar organização visual e consistência de design
-- Simular um projeto real para portfólio profissional
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias](#tecnologias)
+- [Estrutura de Arquivos](#estrutura-de-arquivos)
+- [Como Executar](#como-executar)
+- [Seções da Página](#seções-da-página)
+- [Responsividade](#responsividade)
+- [Aprendizados](#aprendizados)
+- [Autor](#autor)
 
 ---
 
-# Tecnologias Utilizadas
+## Sobre o Projeto
 
-## Front-end
+Este projeto é uma landing page informativa sobre a Fórmula 1, construída com HTML, CSS e JavaScript puros — sem frameworks ou bibliotecas externas além do Font Awesome para ícones.
 
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="45" title="HTML5"/>
-  &nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="45" title="CSS3"/>
-  &nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="45" title="JavaScript"/>
-</p>
+O projeto passou por uma refatoração completa a partir de uma versão inicial de estudos. O objetivo foi aplicar boas práticas de estruturação de código, design responsivo e interatividade com JavaScript, mantendo a escrita acessível e legível para fins de aprendizado.
 
 ---
 
-# Funcionalidades
+## Funcionalidades
 
-## Interface
-
-- Layout moderno inspirado na identidade visual da Fórmula 1
-- Design totalmente responsivo
-- Navegação fluida entre seções
-- Scroll suave
-- Cards interativos com efeitos hover
-- Header fixo com navegação adaptativa
-- Menu mobile hamburguer
+- Alternância entre tema escuro e tema claro com persistência via `localStorage`
+- Menu de navegação responsivo com hamburguer para dispositivos móveis
+- Links de navegação com destaque automático conforme a seção visível na tela
+- Botão de retorno ao topo com aparição controlada por scroll
+- Formulário de contato com validação básica de campos obrigatórios
+- Layout totalmente responsivo para desktop, tablet e mobile
 
 ---
 
-## Sistema de Tema
+## Tecnologias
 
-- Alternância entre tema claro e escuro
-- Sistema baseado em CSS Variables
-- Troca dinâmica de cores via `data-theme`
-
----
-
-## Conteúdo
-
-### Pilotos
-- Informações dos pilotos da temporada 2025
-- Equipes atuais
-- Histórico resumido e conquistas
-
-### Equipes
-- Logos oficiais
-- Informações históricas
-- Imagens dos carros
-
-### Grandes Prêmios
-- Calendário da temporada
-- Circuitos
-- Datas dos eventos
-- Informações históricas sobre cada GP
-
-### Contato
-- Formulário estilizado
-- Informações de contato
-- Integração com Google Maps
+| Tecnologia | Uso |
+|---|---|
+| HTML5 | Estrutura e semântica das páginas |
+| CSS3 | Estilização, variáveis de tema, grid, flexbox e responsividade |
+| JavaScript (ES6) | Interatividade, toggle de tema, menu mobile e validação |
+| Google Fonts | Família tipográfica Barlow e Barlow Condensed |
+| Font Awesome 6 | Ícones da interface |
 
 ---
 
-# Estrutura do Projeto
+## Estrutura de Arquivos
 
-```bash
+```
 ProjetoFormula/
-│
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   ├── js/
-│   │   └── script.js
-│   │
-│   └── imagem/
 │
 ├── index.html
 │
-└── README.md
+└── assets/
+    ├── css/
+    │   └── style.css
+    │
+    ├── js/
+    │   └── script.js
+    │
+    └── imagem/
+        ├── F1Logo.webp
+        ├── F1Logo.png
+        ├── MaxVerstappen.jpg
+        ├── Hamilton.jpg
+        ├── ... (demais imagens de pilotos, equipes e circuitos)
 ```
 
 ---
 
-# Conceitos Aplicados
+## Como Executar
 
-## HTML
+### Pré-requisitos
 
-- Estrutura semântica
-- SEO básico
-- Open Graph
-- Acessibilidade
-- Organização modular de seções
+Não há dependências de instalação. O projeto roda diretamente no navegador.
 
----
+### Passo a passo
 
-## CSS
-
-- CSS Variables
-- Design responsivo
-- CSS Grid
-- Flexbox
-- Media Queries
-- Transições e animações
-- Arquitetura organizada por seções
-- Sistema de temas
-
----
-
-## JavaScript
-
-- Manipulação de DOM
-- Toggle de tema
-- Menu mobile
-- Interações visuais
-- Controle de elementos dinâmicos
-
----
-
-# Responsividade
-
-O projeto foi desenvolvido para diferentes tamanhos de tela:
-
-- Desktop
-- Notebook
-- Tablet
-- Smartphones
-
-Utilizando breakpoints específicos para adaptação completa do layout.
-
----
-
-# Destaques Técnicos
-
-- Código organizado e escalável
-- Estrutura visual consistente
-- Componentização visual com cards reutilizáveis
-- Uso moderno de `clamp()`
-- Sistema de variáveis globais
-- Interface otimizada para experiência do usuário
-- Separação clara de responsabilidades
-
----
-
-# Melhorias Futuras
-
-- Renderização dinâmica com JavaScript
-- Integração com API da Fórmula 1
-- Sistema de busca e filtros
-- Página individual para pilotos
-- Sistema de favoritos
-- Estatísticas em tempo real
-- Backend para gerenciamento de conteúdo
-
----
-
-# Como Executar
-
-Clone o repositório:
-
+**1. Clone o repositório**
 ```bash
-git clone https://github.com/Samuelftc/ProjetoFormula.git
+git clone https://github.com/samuelftc/ProjetoFormula.git
 ```
 
-Acesse a pasta:
-
+**2. Acesse a pasta do projeto**
 ```bash
 cd ProjetoFormula
 ```
 
-Execute o arquivo:
+**3. Abra no navegador**
 
-```bash
-index.html
-```
+Abra o arquivo `index.html` diretamente no navegador, ou use uma extensão como Live Server no VS Code para um ambiente de desenvolvimento local.
 
 ---
 
-# Autor
+## Seções da Página
 
-<p align="center">
-  <strong>Samuel Ferreira</strong>
-</p>
+### Home / Banner
+Seção de abertura com imagem de fundo, sobreposição com gradiente e chamada para ação.
 
-<p align="center">
-  Desenvolvedor Web focado em evolução contínua e construção de projetos modernos e profissionais.
-</p>
+### Sobre
+Explicação sobre o que é a Fórmula 1, o Campeonato de Pilotos e o Campeonato de Construtores, apresentados em cards informativos.
+
+### Pilotos
+Grid com os 20 pilotos titulares da temporada 2025. Cada card exibe foto, equipe e uma breve biografia do piloto.
+
+### Equipes
+Lista completa das 10 equipes do grid com logo, descrição histórica e fotos dos carros da temporada.
+
+### Grandes Premios
+Grid com todos os 24 GPs do calendário 2025, contendo bandeira do país, foto do circuito, data e descrição histórica de cada etapa.
+
+### Contato
+Formulário com campos de nome, e-mail, telefone, assunto e mensagem, acompanhado de informações de contato e mapa incorporado.
 
 ---
 
-# Contato
+## Responsividade
 
-<p align="center">
-  <a href="mailto:samuelferreiradev08@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-</p>
+O layout foi construído com breakpoints para três tamanhos de tela:
+
+| Breakpoint | Layout |
+|---|---|
+| Acima de 1024px | Desktop — 4 colunas para pilotos e GPs |
+| Ate 1024px | Tablet — 3 colunas para pilotos e GPs |
+| Ate 768px | Mobile — menu hamburguer, 2 colunas para pilotos e GPs |
+| Ate 480px | Mobile pequeno — 1 coluna para todos os grids |
+
+---
+
+## Aprendizados
+
+Este projeto consolidou os seguintes conceitos:
+
+- **Variáveis CSS (`custom properties`)** para gerenciar dois temas (escuro e claro) de forma centralizada
+- **CSS Grid e Flexbox** aplicados juntos para layouts complexos e responsivos
+- **Manipulacao do DOM** com JavaScript puro para interatividade sem dependências
+- **`localStorage`** para persistência da preferência de tema entre sessões
+- **Scroll events** para controlar elementos dinâmicos como o botão de topo e o link ativo na navegação
+- **Semântica HTML5** com uso correto de `header`, `main`, `section`, `nav`, `footer` e atributos de acessibilidade como `aria-label`
+- **Boas práticas de organização** separando HTML, CSS e JS em arquivos distintos
+
+---
+
+## Autor
+
+Desenvolvido por **Samuel Ferreira**
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Samuelftc)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:samuelferreiradev08@gmail.com)
+
+---
+
+> Projeto desenvolvido como parte dos estudos em desenvolvimento web front-end.
